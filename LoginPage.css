@@ -1,0 +1,49 @@
+*{
+   font-family: "Arial Rounded MT Bold";
+
+}
+.mainCard{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 30%;
+   padding: 20px;
+   border-radius: 10px;
+   height: 90%;
+
+}
+
+.login{
+   font-weight: bold;
+   text-align: center;
+   margin-bottom: 40px;
+}
+
+.marginSmall{
+   margin-bottom: 5px;
+}
+
+.marginMedium{
+   margin-bottom: 30px;
+}
+
+.alignCenter{
+   position: absolute;
+   top: 70%;
+   left: 15%;
+}
+.gradient-custom {
+   /* fallback for old browsers */
+   background: #a5c1ef;
+
+   /* Chrome 10-25, Safari 5.1-6 */
+   background: -webkit-linear-gradient(to right, rgb(113, 114, 225), rgb(133, 174, 245));
+
+   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: linear-gradient(to right, rgb(91, 93, 238), rgb(132, 171, 236))
+}
+
+.buttonLogin{
+   color:white;
+}
