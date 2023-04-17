@@ -1,0 +1,46 @@
+/* images */
+.profileImg {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.margin-Right {
+  margin-right: auto;
+}
+
+/* right side */
+.rightBlock {
+  display: flex;
+  width: 60%;
+}
+
+/* left side */
+.leftBlock {
+  display: flex;
+  width: 40%;
+}
+
+/* the big block */
+.bigBlock {
+  display: flex;
+  margin: auto;
+  margin-top: 5%;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  width: 70%;
+  height: 75vh;
+}
+
+.littleBlock {
+  height: 10vh;
+  display: flex;
+}
+
+.chatBlock {
+  height: 61vh;
+  display: flex;
+}
