@@ -1,9 +1,10 @@
+
 /* images */
 .profileImg {
   float: left;
-  max-width: 60px;
+  max-width: 4rem;
   width: 100%;
-  margin-right: 20px;
+  margin-right: 1rem;
   border-radius: 50%;
 }
 
@@ -28,7 +29,7 @@
   display: flex;
   margin: auto;
   margin-top: 5%;
-  border: 1px solid #dee2e6;
+  /* border: 1px solid #dee2e6; */
   border-radius: 0.25rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   width: 70%;
@@ -43,4 +44,93 @@
 .chatBlock {
   height: 61vh;
   display: flex;
+}
+
+
+/* all massages */
+
+.massages{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 15vh;
+}
+
+.myMassage{
+  text-align: center;
+  width: 30%;
+  top:10%;
+  position: relative;
+  border-radius: 25px;
+  background-color: #82ccdd;
+  height: 4vh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.userImgMsg{
+  width: 100%;
+  border:1.5px solid #f5f6fa;
+
+}
+
+.imgContMsg{
+    width: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .msgCotainer{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1%;
+  border-radius: 25px;
+  background-color: #82ccdd;
+  padding: 1.1%;
+  position: relative;
+}
+
+.msgCotainerSend{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 1%;
+  border-radius: 25px;
+  background-color: #78e08f;
+  padding: 1.1%;
+  position: relative;
+}
+
+
+  .msgTime{
+		position: absolute;
+		left: 0;
+		bottom: -40%;
+		color:#C0C0C0	;
+		font-size: 70%;
+	}
+
+  .msgTimeSend{
+  position: absolute;
+  right:0;
+  bottom: -40%;
+  color: #C0C0C0;
+  font-size: 70%;
+}
+
+/* icons */
+
+.plusIcon{
+
+}
+
+.sendIcon{
+  margin-right: 10%;
+}
+
+/* logout botton */
+.botton{
+  margin-left: 96%;
+  display: block;
 }
