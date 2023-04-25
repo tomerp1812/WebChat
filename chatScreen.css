@@ -1,237 +1,334 @@
 body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  display: flex;
-}
-
-/* the blocks of the screen */
-.Block1 {
-  height: 30%;
-  width: 100%;
-  position: absolute;
-}
-
-.Block2 {
-  height: 70%;
-  width: 100%;
-  position: absolute;
-  display: flex;
-  bottom: 0;
-}
-
-/* nice background */
-.background {
-  background-image: url("backgroundImage.jpg");
-  color: rgba(241, 239, 239, 0.94);
-  background-size: cover;
-}
-
-/* images */
-.profileImg {
-  float: left;
-  max-width: 4rem;
-  width: 100%;
-  margin-right: 1rem;
-  border-radius: 50%;
-}
-
-/* added to pictures that needed an auto margin */
-.margin-Right {
-  margin-right: auto;
-}
-
-/* right side */
-.rightBlock {
-  display: flex;
-  width: 60%;
-}
-
-/* left side */
-.leftBlock {
-  display: flex;
-  width: 40%;
-}
-
-/* the big block */
-.bigBlock {
-  display: flex;
-  margin: auto;
-  margin-top: 5%;
-  border-radius: 0.25rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  width: 70%;
-  height: 75vh;
-}
-
-.littleBlock {
-  height: 10vh;
-  display: flex;
-}
-
-.feeler {
-  height: 100%;
-}
-
-.chatBlock {
-  height: 61vh;
-  display: flex;
-}
-
-/* all massages */
-.massages {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 15vh;
-}
-
-.myMassage {
-  text-align: center;
-  width: 30%;
-  top: 10%;
-  position: relative;
-  border-radius: 25px;
-  background-color: #82ccdd;
-  height: 4vh;
-  justify-content: center;
   display: flex;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("backgroundImage.jpg");
+  background-size: cover;
+  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.1px;
+  color: rgb(3, 4, 66);
+  text-rendering: optimizeLegibility;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  -webkit-font-smoothing: antialiased;
 }
 
-.userImgMsg {
+#frame {
   width: 100%;
-  border: 1.5px solid #f5f6fa;
+  min-width: 360px;
+  max-width: 900px;
+  height: 92vh;
+  min-height: 300px;
+  max-height: 520px;
+  background: #E6EAEA;
 }
 
-.imgContMsg {
-  width: 5%;
-  margin-left: 2%;
-  margin-right: 2%;
+@media screen and (max-width: 360px) {
+  #frame {
+    width: 100%;
+    height: 100vh;
+  }
 }
 
-.msgCotainer {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 1%;
-  border-radius: 25px;
-  background-color: #82ccdd;
-  padding: 1.1%;
+#frame #sidepanel {
+  float: left;
+  min-width: 280px;
+  max-width: 340px;
+  width: 40%;
+  height: 100%;
+  background: rgb(3, 4, 66);
+  color: #f5f5f5;
+  overflow: hidden;
   position: relative;
 }
-
-.msgCotainerSend {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 1%;
-  border-radius: 25px;
-  background-color: #78e08f;
-  padding: 1.1%;
-  position: relative;
+.addNewContact{
+  color:black;
 }
-/* time of massages */
-.msgTime {
-  position: absolute;
-  left: 0;
-  bottom: -40%;
-  color: #C0C0C0;
-  font-size: 70%;
+@media screen and (max-width: 735px) {
+  #frame #sidepanel {
+    width: 58px;
+    min-width: 58px;
+  }
 }
-
-.msgTimeSend {
-  position: absolute;
-  right: 0;
-  bottom: -40%;
-  color: #C0C0C0;
-  font-size: 70%;
-}
-
-/* icons */
-.sendIcon {
-  margin-right: 10%;
-}
-
-/* logout botton */
+/* logout button */
 .button {
-  top: 0;
   right: 0;
-  height: 15%;
-  position: absolute;
-}
-
-/* popup botton */
-.overlay {
-  position: fixed;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 300ms;
-  visibility: hidden;
-  opacity: 0;
-}
-
-/* hide everything else */
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0 auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 30%;
-  max-width: 500px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  z-index: 9999;
-  transition: all 5s ease-in-out;
-}
-
-.popup h4 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
-
-.popup .close {
   position: absolute;
-  top: 10px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
+
+}
+.font_small{
+  font-size:xx-small;
+}
+#frame #sidepanel #profile {
+  width: 80%;
+  margin: 25px auto;
 }
 
-/* hover the X botton and make it blue*/
-.popup .close:hover {
-  color: #1E90FF;
+
+
+#frame #sidepanel #profile.expanded .wrap {
+  height: 210px;
+  line-height: initial;
 }
 
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
-}
-
-@media screen and (max-width: 700px) {
-  .box {
-    width: 70%;
-  }
-
-  .popup {
-    width: 70%;
-  }
-}
-
-.contractInputBotton {
+#frame #sidepanel #profile.expanded .wrap p {
   margin-top: 20px;
+}
+
+#frame #sidepanel #profile.expanded .wrap i.expand-button {
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  -ms-filter: "FlipH";
+}
+
+#frame #sidepanel #profile .wrap {
+  height: 60px;
+  line-height: 60px;
+  overflow: hidden;
+  -moz-transition: 0.3s height ease;
+  -o-transition: 0.3s height ease;
+  -webkit-transition: 0.3s height ease;
+  transition: 0.3s height ease;
+}
+
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap {
+    height: 55px;
+  }
+}
+
+#frame #sidepanel #profile .wrap img {
+  width: 50px;
+  border-radius: 50%;
+  padding: 3px;
+  border: 2px solid #5b5dee;
+  height: auto;
+  float: left;
+
+}
+
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap img {
+    width: 40px;
+    margin-left: 4px;
+  }
+}
+
+#frame #sidepanel #profile .wrap p {
+  float: left;
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap p {
+    display: none;
+  }
+}
+
+
+
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap i.expand-button {
+    display: none;
+  }
+}
+
+
+/*search label*/
+#frame #sidepanel #search {
+  border-top: 1px solid rgba(17, 19, 131, 0.53);
+  border-bottom: 1px solid rgba(17, 19, 131, 0.53);
+  font-weight: 300;
+}
+
+
+#frame #sidepanel #search label {
+  position: absolute;
+  margin: 10px 0 0 20px;
+}
+
+#frame #sidepanel #search input {
+  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+  padding: 10px 0 10px 46px;
+  width: calc(100% - 25px);
+  border: none;
+  background: rgba(17, 19, 131, 0.53);
+  color: #f5f5f5;
+}
+.boldFont{
+  font-weight: bold;
+}
+.font_medium{
+  font-size: small;
+}
+
+#frame #sidepanel #search input::-webkit-input-placeholder {
+  color: #f5f5f5;
+}
+
+#frame #sidepanel #contacts ul li.contact {
+  position: relative;
+  padding: 10px 0 15px 0;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+
+#frame #sidepanel #contacts ul li.contact .wrap {
+  width: 88%;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+
+
+#frame #sidepanel #contacts ul li.contact .wrap img {
+  width: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+}
+
+
+
+#frame #sidepanel #bottom-bar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+/*Add contents button*/
+#frame #sidepanel #bottom-bar button {
+  float: left;
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  background: rgba(17, 19, 131, 0.53);
+  color: #f5f5f5;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+}
+
+
+#frame .content {
+  float: right;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 735px) {
+  #frame .content {
+    width: calc(100% - 58px);
+    min-width: 300px !important;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #frame .content {
+    width: calc(100% - 340px);
+  }
+}
+
+/*contact-profile*/
+#frame .content .contact-profile {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background: #f5f5f5;
+}
+
+/*profile image position*/
+#frame .content .contact-profile img {
+  width: 40px;
+  border-radius: 50%;
+  float: left;
+  margin: 9px 12px 0 9px;
+}
+
+
+#frame .content .messages ul li {
+  display: inline-block;
+  clear: both;
+  float: left;
+  margin: 15px 15px 5px 15px;
+  width: calc(100% - 25px);
+  font-size: 0.9em;
+}
+
+
+
+#frame .content .messages ul li.sent img {
+  margin: 6px 8px 0 0;
+}
+
+/*massages background*/
+#frame .content .messages ul li.sent p {
+  background: rgb(3, 4, 66);
+  color: #f5f5f5;
+}
+
+/*design of send massage*/
+#frame .content .messages ul li.replies img {
+  float: right;
+  margin: 6px 0 0 8px;
+}
+
+#frame .content .messages ul li.replies p {
+  background: #f5f5f5;
+  float: right;
+}
+
+
+/*design of received massage*/
+#frame .content .messages ul li p {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 205px;
+  line-height: 130%;
+}
+#frame .content .messages ul li img {
+  width: 22px;
+  border-radius: 50%;
+  float: left;
+}
+
+
+
+/*position of input text and button send*/
+#frame .content .message-input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+/*write a massage input-design*/
+#frame .content .message-input .wrap input {
+  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+  float: left;
+  border: none;
+  width: calc(100% - 90px);
+  padding: 11px 32px 10px 8px;
+  font-size: 0.8em;
+  color: rgb(3, 4, 66);
+}
+
+
+/*send button*/
+#frame .content .message-input .wrap button {
+  float: right;
+  border: none;
+  width: 90px;
+  padding: 12px 0;
+  cursor: pointer;
+  background: rgb(3, 4, 66);
+  color: #f5f5f5;
 }
