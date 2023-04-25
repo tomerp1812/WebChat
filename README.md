@@ -8,6 +8,7 @@ An ongoing task of creating WhatsApp Web application using a combination of seve
   - [Registration Screen](#registration-screen)
   - [Chat Screen](#chat-screen)
 - [Technologies Used](#technologies-used)
+- [Installation and Execution](#installation-and-execution)
 - [Authors](#authors)
 
 ## Description
@@ -31,6 +32,21 @@ The project uses the following technologies:
 * HTML
 * CSS
 * Bootstrap 5
+
+## installation-and-execution
+    
+To clone and run this application, you'll need [Git](https://git-scm.com) installed on your computer.
+  
+From your command line:
+
+  
+```bash
+# Clone this repository.
+$ git clone https://github.com/IditMedizada/WhatsApp-Web.git
+
+# Go into the repository.
+$ cd WhatsApp-Web
+```
 
 ## Authors
 - [Idit Medizada](https://github.com/IditMedizada)
