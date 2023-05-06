@@ -1,9 +1,9 @@
-import Contact from "../Contact/Contact";
+import Contact from "./Contact";
 
-function ContactListResults({ contacts }){
+function ContactListResults({ contacts, changeContact }){
 
     const contactsList = contacts.map((contact, key) => {
-        return <Contact key={key} contact={contact} />;
+        return <Contact key={key} contact={contact} changeContact={changeContact} />;
     });
 
     return(

@@ -1,6 +1,6 @@
-function Contact( {contact} ) {
+function Contact( {contact, changeContact} ) {
     return (
-        <li className="contact">
+        <li onClick={() => changeContact(contact)} className="contact">
             <div className="wrap">
                 <span className="contact-status"></span>
                 <img src={contact.image}

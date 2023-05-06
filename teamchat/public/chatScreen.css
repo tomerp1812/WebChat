@@ -64,7 +64,7 @@ body {
 }
 #frame #sidepanel #profile {
   width: 80%;
-  margin: 25px auto;
+  margin: 10px auto;
 }
 
 
@@ -155,7 +155,7 @@ body {
 #frame #sidepanel #search input {
   font-family: "proxima-nova", "Source Sans Pro", sans-serif;
   padding: 10px 0 10px 46px;
-  width: calc(100% - 25px);
+  width: 100%;
   border: none;
   background: rgba(17, 19, 131, 0.53);
   color: #f5f5f5;
@@ -171,6 +171,18 @@ body {
   color: #f5f5f5;
 }
 
+#frame #sidepanel #contacts ul li.contact:nth-child(2) img {
+  clear: left;
+}
+
+#frame #sidepanel #contacts {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: calc(100% - 169px);
+  overflow-y: auto;
+}
+
 #frame #sidepanel #contacts ul li.contact {
   position: relative;
   padding: 10px 0 15px 0;
@@ -182,11 +194,10 @@ body {
 
 #frame #sidepanel #contacts ul li.contact .wrap {
   width: 88%;
-  margin: 0 auto;
+  margin-left: 20px;
+  min-height: 27px;
   position: relative;
 }
-
-
 
 
 #frame #sidepanel #contacts ul li.contact .wrap img {
@@ -255,12 +266,18 @@ body {
   margin: 9px 12px 0 9px;
 }
 
+#frame .content .messages {
+  overflow-y: auto;
+  height: 80%;
+  max-height: 260px;
+}
+
 
 #frame .content .messages ul li {
   display: inline-block;
   clear: both;
   float: left;
-  margin: 15px 15px 5px 15px;
+  margin: 7px 10px 3px 8px;
   width: calc(100% - 25px);
   font-size: 0.9em;
 }
@@ -294,8 +311,8 @@ body {
   display: inline-block;
   padding: 10px 15px;
   border-radius: 20px;
-  max-width: 205px;
-  line-height: 130%;
+  /* max-width: 205px; */
+  /* line-height: 130%; */
 }
 #frame .content .messages ul li img {
   width: 22px;
