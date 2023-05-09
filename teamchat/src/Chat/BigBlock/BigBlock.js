@@ -2,7 +2,7 @@ import LeftPanel from "../LeftPanel/LeftPanel";
 import RightPanel from "../RightPanel/RightPanel";
 import { useState } from "react";
 
-function BigBlock() {
+function BigBlock( {me} ) {
 
   const [selectedContact, setSelectedContact] = useState(null);
 
@@ -12,8 +12,8 @@ function BigBlock() {
 
   return (
     <div id="frame">
-      <LeftPanel changeContact={changeContact} />
-      <RightPanel selectedContact={selectedContact} />
+      <LeftPanel changeContact={changeContact} me={me}/>
+      <RightPanel selectedContact={selectedContact} image={me.addPicture}/>
     </div>
   );
 }

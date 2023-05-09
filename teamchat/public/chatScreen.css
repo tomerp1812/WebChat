@@ -285,6 +285,10 @@ body {
   margin: 9px 12px 0 9px;
 }
 
+.contactBackgroundColor{
+  color: #000000;
+}
+
 #frame .content .messages {
   overflow-y: auto;
   height: 80%;

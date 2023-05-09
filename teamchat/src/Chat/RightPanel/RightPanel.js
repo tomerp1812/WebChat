@@ -5,7 +5,7 @@ import { useState } from "react";
 import sentMassages from "./Massages/Sent/SentList"
 import contacts from "../LeftPanel/Contacts/ContactsList";
 
-function RightPanel({ selectedContact }) {
+function RightPanel({ selectedContact,image }) {
 
     const [sentList, setSentList] = useState(sentMassages);
 
@@ -25,7 +25,7 @@ function RightPanel({ selectedContact }) {
                 sentTo: selectedContact.name,
                 sent: q,
                 time: new Date().toLocaleDateString()
-            };     
+            };  
             setSentList([...sentList, newMassage]);
         }
     }
@@ -34,7 +34,7 @@ function RightPanel({ selectedContact }) {
         //<!--Profile contents-->
         <div className="content">
             <ContactProfile contact={selectedContact} />
-            <Massages sentList={sentList} contact={selectedContact}/>
+            <Massages sentList={sentList} contact={selectedContact} image={image}/>
             <WriteMassage addMassage={addMassage} />
         </div>
     );

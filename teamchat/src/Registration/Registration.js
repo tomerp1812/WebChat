@@ -38,13 +38,13 @@ function Registration({list, setList}) {
   }
   //Add picture
   const [addPicture, setAddPicture] = useState('');
-  const handleAddPicture = (event) => {
-    setAddPicture(event.target.value);
+  const handleAddPicture = (imageSrc) => {
+    setAddPicture(imageSrc);
   }
+  
 
   //Submit button
   const handleSubmit = (event) => {
-    event.preventDefault();
     //handle username
     if (name.trim().length < 2 || name.trimEnd().length > 10) {
       alert('Username must be between 2 and 10 characters.');

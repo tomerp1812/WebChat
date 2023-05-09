@@ -1,12 +1,12 @@
-function Profile() {
+function Profile({me}) {
     return (
          //<!--Profile image-->
         <div id="profile">
             <div className="wrap">
                 <img id=""
-                    src="basket.jpeg"
+                    src={me.addPicture}
                     alt="" />
-                <p className="boldFont">Tomer</p>
+                <p className="boldFont">{me.name}</p>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
-function Sent( {Massage} ) {
+function Sent( {Massage, image} ) {
     return (
         <li className="sent">
-        <img src="basket.jpeg" alt="" />
+        <img src={image} alt="" />
         <p>{Massage.sent}</p>
       </li>
     );
