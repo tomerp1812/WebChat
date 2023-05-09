@@ -4,9 +4,11 @@ import Password from "./Password/Password";
 import UserName from "./UserName/UserName";
 import LoginTitle from "./LoginTitle/LoginTitle";
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
-function Login({ list }) {
+function Login({ list, setUser }) {
 
+    const navigate = useNavigate();
     // Username
     const [name, setName] = useState('');
     const handleNameChange = (event) => {
@@ -20,25 +22,21 @@ function Login({ list }) {
 
     const handleClick = (event) => {
         event.preventDefault();
+        let found = false;
         // check if the list is not empty
         if (list && list.length > 0) { 
-            list.forEach((item) => {
-                if(item.name === name && item.password === password){
-                    alert("happy :)")
-                    return;
-                }
-                if(item.name !== name ){
-                    alert("Username is incorrect");
-                }else{
-                    alert("Password is incorrect");
-
-                }
-            });
-        } else {
-            alert("Account does not exist");
-            return;
+          list.forEach((item) => {
+            if(item.name === name && item.password === password){
+              setUser(item);
+              navigate('/Chat');
+              found = true;
+            }
+          });
         }
-    };
+        if (!found) {
+          alert("Username or Password incorrect");
+        }
+      };      
 
     return (
         <div className=" background">

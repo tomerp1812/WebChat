@@ -9,19 +9,21 @@ function AddPicture({onChange}) {
 
         reader.onload = () => {
             setImageSrc(reader.result);
+            // Pass imageSrc as an argument to onChange function
+            onChange(reader.result);
         };
 
         if (file) {
             reader.readAsDataURL(file);
         }
 
-        onChange(event);
+        onChange(reader.result);
     };
 
     return (
         <div>
             <input accept="image/*" onChange={handleFileChange} className="form-control marginMedium" type="file" id="formFileDisabled"></input>
-            <img src={imageSrc} className="marginMedium rounded mx-auto d-block"></img>
+            <img src={imageSrc} className="marginMedium rounded mx-auto d-block loginImage"></img>
         </div>
     );
 }
