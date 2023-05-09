@@ -1,4 +1,4 @@
-import profilePictures from "../../profilePicture";
+import profilePictures from "../../../profilePicture";
 
 export const createNewContact = (originalContactsList, setOriginalContactsList, setContactList, q) => {
   const newFriend = {

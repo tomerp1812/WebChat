@@ -4,9 +4,11 @@ import Password from "./Password/Password";
 import UserName from "./UserName/UserName";
 import LoginTitle from "./LoginTitle/LoginTitle";
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 function Login({ list }) {
 
+    const navigate = useNavigate();
     // Username
     const [name, setName] = useState('');
     const handleNameChange = (event) => {
@@ -24,7 +26,7 @@ function Login({ list }) {
         if (list && list.length > 0) { 
             list.forEach((item) => {
                 if(item.name === name && item.password === password){
-                    alert("happy :)")
+                    navigate('/Chat');
                     return;
                 }
                 if(item.name !== name ){

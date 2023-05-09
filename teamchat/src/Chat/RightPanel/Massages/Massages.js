@@ -1,4 +1,3 @@
-import Replied from "./Replied/Replied";
 import SentListResults from "./Sent/SentListResults";
 
 function Massages( {sentList, contact} ){

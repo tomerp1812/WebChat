@@ -1,8 +1,8 @@
 import ContactProfile from "./ContactProfile/ContactProfile";
 import Massages from "./Massages/Massages";
-import WriteMassage from "./WriteMassage/WriteMassage";
+import WriteMassage from "./Massages/WriteMassage/WriteMassage";
 import { useState } from "react";
-import sentMassages from "./Massages/Sent/SentList";
+import sentMassages from "./Massages/Sent/SentList"
 import contacts from "../LeftPanel/Contacts/ContactsList";
 
 function RightPanel({ selectedContact }) {

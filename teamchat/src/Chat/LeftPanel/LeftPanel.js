@@ -1,10 +1,10 @@
-import AddContact from "../Chat/LeftPanel/AddContact/AddContact";
-import Search from "../Chat/LeftPanel/Search/Search";
+import AddContact from "./AddContact/AddContact";
+import Search from "./Search/Search";
 import { useState } from "react";
 import ContactListResults from "./Contacts/ContactListResults";
 import contacts from "./Contacts/ContactsList";
-import Profile from "../Chat/LeftPanel/Profile/Profile";
-import { doSearch } from "../Chat/LeftPanel/Search/doSearch";
+import Profile from "./Profile/Profile";
+import { doSearch } from "./Search/doSearch";
 import { createNewContact } from "./Contacts/CreateNewContact";
 
 

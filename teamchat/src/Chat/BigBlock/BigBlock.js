@@ -1,5 +1,5 @@
-import LeftPanel from "./LeftPanel/LeftPanel";
-import RightPanel from "./RightPanel/RightPanel";
+import LeftPanel from "../LeftPanel/LeftPanel";
+import RightPanel from "../RightPanel/RightPanel";
 import { useState } from "react";
 
 function BigBlock() {
