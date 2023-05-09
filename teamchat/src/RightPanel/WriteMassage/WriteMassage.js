@@ -9,8 +9,8 @@ function WriteMassage({ addMassage }) {
         }
     }
 
-    const handleKeyDown = function(event){
-        if(event.key === "Enter"){
+    const handleKeyDown = function (event) {
+        if (event.key === "Enter") {
             sendMassage();
         }
     }
@@ -19,8 +19,11 @@ function WriteMassage({ addMassage }) {
         //<!--message-input-->
         <div className="message-input">
             <div className="wrap">
-                <input onKeyDown={handleKeyDown} ref={massageBox} className="form-control" type="text" placeholder="Write your message..."></input>
-                <button onClick={sendMassage} className="submit">Send  <i className="bi bi-envelope"></i></button>
+                <input onKeyDown={handleKeyDown}
+                    ref={massageBox} className="form-control"
+                    type="text" placeholder="Write your message..."></input>
+                <button onClick={sendMassage}
+                    className="submit">Send  <i className="bi bi-envelope"></i></button>
             </div>
         </div>
     );

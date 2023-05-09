@@ -1,10 +1,8 @@
-import contacts from "../../LeftPanel/Contacts/ContactsList";
-
 function ContactProfile({ contact }) {
 
-    if(!contact){
+    if (!contact) {
         return (
-        <div className="contact-profile"></div>
+            <div className="contact-profile"></div>
         );
     }
 

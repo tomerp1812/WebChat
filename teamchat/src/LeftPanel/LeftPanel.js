@@ -4,38 +4,30 @@ import { useState } from "react";
 import ContactListResults from "./Contacts/ContactListResults";
 import contacts from "./Contacts/ContactsList";
 import Profile from "./Profile/Profile";
-import profilePictures from "../profilePicture";
+import { doSearch } from "./Search/doSearch";
+import { createNewContact } from "./Contacts/CreateNewContact";
 
-function LeftPanel( {changeContact} ) {
+
+function LeftPanel({ changeContact }) {
 
     const [contactsList, setContactList] = useState(contacts);
     const [originalContactsList, setOriginalContactsList] = useState(contacts);
 
-    const doSearch = function(q){
-        if (q === "") {
-            setContactList(originalContactsList);
-        } else {
-            setContactList(originalContactsList.filter((contact) => contact.name.includes(q)));
-        }
+    const handleSearch = function (q) {
+        const searchedContactsList = doSearch(originalContactsList, q);
+        setContactList(searchedContactsList);
     }
 
-    const newContact = function(q) {
-        const newFriend = {
-          name: q,
-          image: profilePictures[Math.floor(Math.random() * profilePictures.length)],
-          massage: "",
-          time: "",
-        };
-        setOriginalContactsList([...originalContactsList, newFriend]);
-        setContactList([...originalContactsList, newFriend]);
-      };
+    const handleNewContact = function (q) {
+        createNewContact(originalContactsList, setOriginalContactsList, setContactList, q);
+    };
 
     return (
         <div id="sidepanel">
-            <Profile/>
-            <Search doSearch={doSearch} />
-            <ContactListResults contacts={contactsList} changeContact={changeContact}/>
-            <AddContact newContact={newContact}/>
+            <Profile />
+            <Search doSearch={handleSearch} />
+            <ContactListResults contacts={contactsList} changeContact={changeContact} />
+            <AddContact newContact={handleNewContact} />
         </div>
     );
 }
