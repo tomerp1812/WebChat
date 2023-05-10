@@ -1,33 +1,20 @@
 import ContactProfile from "./ContactProfile/ContactProfile";
 import Massages from "./Massages/Massages";
 import WriteMassage from "./Massages/WriteMassage/WriteMassage";
-import { useState } from "react";
-import sentMassages from "./Massages/Sent/SentList"
 import contacts from "../LeftPanel/Contacts/ContactsList";
 
-function RightPanel({ selectedContact,image }) {
-
-    const [sentList, setSentList] = useState(sentMassages);
+function RightPanel({ selectedContact,image,addMassage,sentList }) {
 
     if (!selectedContact && contacts.length > 0) {
         selectedContact = contacts[0];
     }
 
     if (!selectedContact && contacts.length == 0) {
-        return null;
-    }
-
-    const addMassage = function (q) {
-        if (!selectedContact && contacts.length == 0) {
-            
-        } else{
-            const newMassage = {
-                sentTo: selectedContact.name,
-                sent: q,
-                time: new Date().toLocaleDateString()
-            };  
-            setSentList([...sentList, newMassage]);
-        }
+        return (
+            <div className="welcome-message">
+              <h2>Welcome to teamChat!</h2>
+            </div>
+          );          
     }
 
     return (

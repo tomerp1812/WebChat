@@ -1,15 +1,24 @@
 import Contact from "./Contact";
+import { useState } from "react";
+function ContactListResults({ sentList, contacts, changeContact }){
 
-function ContactListResults({ contacts, changeContact }){
+    const [selectedContact, setSelectedContact] = useState(null);
+
+    const onSelectContact = (contact) => {
+      setSelectedContact(contact);
+      changeContact(contact);
+    };
 
     const contactsList = contacts.map((contact, key) => {
-        return <Contact key={key} contact={contact} changeContact={changeContact} />;
+        const isSelected = contact === selectedContact;
+        return <Contact key={key} isSelected={isSelected} sentList={sentList}
+         contact={contact} onSelectContact={onSelectContact}/>;
     });
 
     return(
         //<!--contacts-->
          <div id="contacts">
-         <ul>
+         <ul className="listClass">
              {contactsList}
          </ul>
        </div>

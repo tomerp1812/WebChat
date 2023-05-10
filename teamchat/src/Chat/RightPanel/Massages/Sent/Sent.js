@@ -2,7 +2,7 @@ function Sent( {Massage, image} ) {
     return (
         <li className="sent">
         <img src={image} alt="" />
-        <p>{Massage.sent}</p>
+        <p className="messageMargin">{Massage.sent}</p>
       </li>
     );
 }

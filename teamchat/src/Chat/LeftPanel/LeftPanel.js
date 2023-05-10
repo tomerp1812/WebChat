@@ -8,7 +8,7 @@ import { doSearch } from "./Search/doSearch";
 import { createNewContact } from "./Contacts/CreateNewContact";
 
 
-function LeftPanel({ changeContact, me }) {
+function LeftPanel({ sentList, changeContact, me }) {
 
     const [contactsList, setContactList] = useState(contacts);
     const [originalContactsList, setOriginalContactsList] = useState(contacts);
@@ -26,7 +26,7 @@ function LeftPanel({ changeContact, me }) {
         <div id="sidepanel">
             <Profile me={me}/>
             <Search doSearch={handleSearch} />
-            <ContactListResults contacts={contactsList} changeContact={changeContact} />
+            <ContactListResults sentList={sentList} contacts={contactsList} changeContact={changeContact} />
             <AddContact newContact={handleNewContact} />
         </div>
     );
