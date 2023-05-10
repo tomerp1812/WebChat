@@ -11,7 +11,7 @@ function UserName({ value, onChange }) {
     };
     return (
        <div>
-            <input value={value} onChange={onChange} className="form-control marginSmall" type="text" placeholder="Username" onFocus={handleFocus} onBlur={handleBlur} />
+            <input value={value} onChange={onChange} className="form-control marginSmall" type="text" required placeholder="Username" onFocus={handleFocus} onBlur={handleBlur} />
             {isFocused  && <p className='font_error'>Username must be between 2-10 characters long</p>}
        </div>
     );

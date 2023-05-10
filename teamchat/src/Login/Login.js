@@ -5,53 +5,62 @@ import UserName from "./UserName/UserName";
 import LoginTitle from "./LoginTitle/LoginTitle";
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import WebTitle from "../Registration/WebTitle/WebTitle";
 
 function Login({ list, setUser }) {
+  const [errorMessage, setErrorMessage] = useState('');
 
-    const navigate = useNavigate();
-    // Username
-    const [name, setName] = useState('');
-    const handleNameChange = (event) => {
-        setName(event.target.value);
-    };
-    // Password
-    const [password, setPassword] = useState('');
-    const handlePasswordChange = (event) => {
-        setPassword(event.target.value);
-    };
+  const navigate = useNavigate();
+  // Username
+  const [name, setName] = useState('');
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+    setErrorMessage('');
 
-    const handleClick = (event) => {
-        event.preventDefault();
-        let found = false;
-        // check if the list is not empty
-        if (list && list.length > 0) { 
-          list.forEach((item) => {
-            if(item.name === name && item.password === password){
-              setUser(item);
-              navigate('/Chat');
-              found = true;
-            }
-          });
+  };
+  // Password
+  const [password, setPassword] = useState('');
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+    setErrorMessage('');
+
+  };
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    let found = false;
+    // check if the list is not empty
+    if (list && list.length > 0) {
+      list.forEach((item) => {
+        if (item.name === name && item.password === password) {
+          setUser(item);
+          navigate('/Chat');
+          found = true;
         }
-        if (!found) {
-          alert("Username or Password incorrect");
-        }
-      };      
+      });
+    }
+    if (!found) {
+      setErrorMessage("Username or Password incorrect");
+    }
+  };
 
-    return (
-        <div className=" background">
-            <div className="login-box">
-                <form>
-                    <LoginTitle />
-                    <UserName value={name} onChange={handleNameChange} />
-                    <Password value={password} onChange={handlePasswordChange} />
-                    <LoginButton onClick={handleClick} />
-                    <LinkRegistration />
+  return (
+    <div className=" background">
+      <div className="login-box">
+        <form>
+          <WebTitle />
+          <LoginTitle />
+          <UserName value={name} onChange={handleNameChange} />
+          <Password value={password} onChange={handlePasswordChange} />
+          {errorMessage && <h6 className='font_error'>{errorMessage}</h6>}
 
-                </form>
-            </div>
-        </div>
-    );
+          <LoginButton onClick={handleClick} />
+          <LinkRegistration />
+
+        </form>
+      </div>
+    </div>
+  );
 }
 
 export default Login;

@@ -12,7 +12,7 @@ function Password({ value, onChange }) {
     };
     return (
         <div>
-            <input value={value} onChange={onChange} className="form-control marginSmall" type="password" placeholder="Password" onFocus={handleFocus} onBlur={handleBlur}></input>
+            <input required value={value} onChange={onChange} className="form-control marginSmall" type="password" placeholder="Password" onFocus={handleFocus} onBlur={handleBlur}></input>
             {isFocused && <p className='font_error'>Password must be 8-16 characters long - English letters and numbers</p>}
         </div>
     );
