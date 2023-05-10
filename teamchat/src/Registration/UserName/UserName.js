@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 function UserName({ value, onChange }) {
     const [isFocused, setIsFocused] = useState(false);
+//when the user is on the field, the conditions for the username name are displayed
 
     const handleFocus = () => {
       setIsFocused(true);

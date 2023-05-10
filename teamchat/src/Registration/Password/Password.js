@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+//when the user is on the field, the conditions for the password are displayed
 function Password({ value, onChange }) {
     const [isFocused, setIsFocused] = useState(false);
 

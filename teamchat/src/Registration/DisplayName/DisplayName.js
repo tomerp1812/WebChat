@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+
+//when the user is on the field, the conditions for the display name are displayed
 function DisplayName({value, onChange}) {
     const [isFocused, setIsFocused] = useState(false);
 
