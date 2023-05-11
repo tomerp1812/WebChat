@@ -6,69 +6,76 @@ import AddPicture from './AddPicture/AddPicture';
 import RegisterButton from './RegisterButton/RegisterButton';
 import LoginPageLink from './LoginPageLink/LoginPageLink';
 import ConfirmPassword from './ConfirmPassword/ConfirmPassword';
+import WebTitle from './WebTitle/WebTitle';
 import { useState } from 'react';
-import { Link, Navigate } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-// import DetailsList from './DetailsList';
-import Login from '../Login/Login';
-function Registration({list, setList}) {
+
+function Registration({ list, setList }) {
   const navigate = useNavigate();
-  // const [details,setDetails]=useState(DetailsList);
-  // const [list, setList] = useState([]);
+  const [errorMessage, setErrorMessage] = useState('');
 
   // Username
   const [name, setName] = useState('');
   const handleNameChange = (event) => {
     setName(event.target.value);
+    setErrorMessage('');
   };
   // Password
   const [password, setPassword] = useState('');
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
+    setErrorMessage('');
+
   };
   //Confirm Password
   const [confirmPassword, setConfirmPassword] = useState('');
   const handleConfirmPasswordChange = (event) => {
     setConfirmPassword(event.target.value);
+    setErrorMessage('');
+
   };
   //Display name
   const [displayName, setDisplayName] = useState('');
   const handleDisplayName = (event) => {
     setDisplayName(event.target.value);
+    setErrorMessage('');
+
   }
   //Add picture
   const [addPicture, setAddPicture] = useState('');
   const handleAddPicture = (imageSrc) => {
     setAddPicture(imageSrc);
-  }
-  
+    setErrorMessage('');
 
-  //Submit button
+  }
+
+
   const handleSubmit = (event) => {
+    event.preventDefault();
     //handle username
     if (name.trim().length < 2 || name.trimEnd().length > 10) {
-      alert('Username must be between 2 and 10 characters.');
+      setErrorMessage('Username must be between 2 and 10 characters.');
       return;
     }
     //handle password
     const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,16}$/;
     if (!regex.test(password)) {
-      alert('Password must be 8-16 characters long and contain English letters and numbers.');
+      setErrorMessage('Password must be 8-16 characters long and contain English letters and numbers.');
       return
     }
     //handle confirm password
     if (password !== confirmPassword) {
-      alert('Passwords do not match.');
+      setErrorMessage('Passwords do not match.');
       return;
     }
     //handle display name
     if (displayName.trim().length < 2 || displayName.trimEnd().length > 10) {
-      alert('Display name must be between 2 and 10 characters.');
+      setErrorMessage('Display name must be between 2 and 10 characters.');
       return;
     }
     //handle picture
     if (addPicture.trim().length == 0) {
-      alert('Please select a picture.');
+      setErrorMessage('Please select a picture.');
       return;
     }
     //registration successful
@@ -81,22 +88,20 @@ function Registration({list, setList}) {
       addPicture: addPicture
     };
     setList([...list, item]);
-    {/* Pass list to OtherComponent */ }
-    //  <Login list={list} /> 
-    // setDetails([...details,detail]);
     navigate("/");
   };
-
   return (
     <div className="background">
       <div className="login-box">
         <form>
+          <WebTitle />
           <RegistrationTitle />
           <UserName value={name} onChange={handleNameChange} />
           <Password value={password} onChange={handlePasswordChange} />
           <ConfirmPassword value={confirmPassword} onChange={handleConfirmPasswordChange} />
           <DisplayName value={displayName} onChange={handleDisplayName} />
           <AddPicture value={addPicture} onChange={handleAddPicture} />
+          {errorMessage && <h6 className='font_error'>{errorMessage}</h6>}
           <RegisterButton onClick={handleSubmit} />
           <LoginPageLink />
         </form>

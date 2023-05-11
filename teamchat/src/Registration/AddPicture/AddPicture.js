@@ -22,7 +22,7 @@ function AddPicture({onChange}) {
 
     return (
         <div>
-            <input accept="image/*" onChange={handleFileChange} className="form-control marginMedium" type="file" id="formFileDisabled"></input>
+            <input required accept="image/*" onChange={handleFileChange} className="form-control marginMedium" type="file" id="formFileDisabled"></input>
             <img src={imageSrc} className="marginMedium rounded mx-auto d-block loginImage"></img>
         </div>
     );
