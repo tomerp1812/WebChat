@@ -1,6 +1,6 @@
 function Profile({me}) {
     return (
-         //<!--Profile image-->
+         //<!--Profile image and name-->
         <div id="profile">
             <div className="wrap">
                 <img id=""

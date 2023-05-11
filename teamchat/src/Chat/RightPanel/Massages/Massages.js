@@ -1,15 +1,15 @@
 import SentListResults from "./Sent/SentListResults";
 
-function Massages( {sentList, contact, image} ){
+function Massages({ sentList, contact, image }) {
 
-    return(
+    return (
         // <!--Massages-->
         <div className="messages">
-        <ul>
-            <SentListResults Massages={sentList} contact={contact} image={image}/>
-            {/* <Replied /> */}
-        </ul>
-    </div>
+            <ul className="listClass">
+                <SentListResults Massages={sentList} contact={contact} image={image} />
+                {/* <Replied /> */}
+            </ul>
+        </div>
     );
 }
 

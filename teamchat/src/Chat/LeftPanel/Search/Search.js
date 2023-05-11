@@ -1,8 +1,11 @@
 import { useRef } from "react";
 
+//search for fonctacts function
 function Search({ doSearch }) {
 
+    //in searchBox we store the current value of the input
     const searchBox = useRef(null);
+    //we call doSearch each time a key was up
     const search = function () {
         doSearch(searchBox.current.value);
     }

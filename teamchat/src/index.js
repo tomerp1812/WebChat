@@ -6,11 +6,12 @@ import Login from './Login/Login';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import Chat from './Chat/Chat';
+import DetailsList from './Registration/DetailsList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const App = () => {
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(DetailsList);
   const [user, setUser] = useState(null);
 
   return (

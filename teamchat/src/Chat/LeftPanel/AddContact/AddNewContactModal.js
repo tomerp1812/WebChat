@@ -1,3 +1,4 @@
+//just the h1 of the modal
 function AddNewContactModal() {
     return (
         <div className="modal-header">

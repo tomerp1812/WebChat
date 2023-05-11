@@ -1,3 +1,4 @@
+//a function that shows the image and the name of the contact we messaging with
 function ContactProfile({ contact }) {
 
     if (!contact) {
