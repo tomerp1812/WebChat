@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function AddPicture({onChange}) {
-    const [imageSrc, setImageSrc] = useState('pictureImage.png');
+    const [imageSrc, setImageSrc] = useState('/profilePictures/pictureImage.png');
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
