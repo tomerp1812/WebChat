@@ -39,6 +39,7 @@ The project uses the following technologies:
 * HTML
 * CSS
 * Bootstrap 5
+* React
 
 ## installation-and-execution
     
