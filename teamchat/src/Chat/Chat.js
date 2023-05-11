@@ -1,17 +1,13 @@
 import Button from './Button/Button';
 import BigBlock from './BigBlock/BigBlock';
-// import { useNavigate } from "react-router-dom";
 
-function Chat( {user} ) {
-  // const navigate = useNavigate();
-  // if(!user){
-  //   navigate("/");
-  // }
+//main chat page
+function Chat({ user }) {
 
   return (
     <>
       <Button />
-      <BigBlock me={user}/>
+      <BigBlock me={user} />
     </>
   );
 }

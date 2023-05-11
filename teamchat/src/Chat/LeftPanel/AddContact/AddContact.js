@@ -1,6 +1,6 @@
 import Modal from "./Modal";
 
-function AddContact( {newContact} ) {
+function AddContact({ newContact }) {
 
   return (
     //  <!--Add contacts-->
@@ -8,7 +8,8 @@ function AddContact( {newContact} ) {
       <button id="addcontact" data-bs-toggle="modal" data-bs-target="#exampleModal"><span>Add contact</span>
         <i className="bi bi-person-plus"></i>
       </button>
-        <Modal newContact={newContact}/>
+      {/* the modal that is beeing displayed */}
+      <Modal newContact={newContact} />
     </div>
   );
 }
