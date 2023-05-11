@@ -1,4 +1,4 @@
-import profilePictures from "../../../profilePicture";
+import profilePictures from "../../profilePicture";
 
 //counter for contacts
 let contactCounter = 0;
