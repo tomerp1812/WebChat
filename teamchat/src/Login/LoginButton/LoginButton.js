@@ -1,8 +1,4 @@
-import detailsList from "../../Registration/DetailsList";
-
 function LoginButton({onClick}) {
-   
-    
 
     return (
         // <!--Login button-->
