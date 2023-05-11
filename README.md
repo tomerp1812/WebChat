@@ -50,10 +50,12 @@ From your command line:
   
 ```bash
 # Clone this repository.
-$ git clone https://github.com/IditMedizada/WhatsApp-Web.git
+$  git clone -b master1b https://github.com/IditMedizada/WhatsApp-Web.git
 
 # Go into the repository.
 $ cd WhatsApp-Web
+$ cd teamchat  
+$ npm start
 ```
 
 ## Authors
