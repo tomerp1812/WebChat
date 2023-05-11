@@ -44,12 +44,12 @@
 
 
 html {
-   background-image: url("backgroundImage.jpg");
+   background-image: url("../profilePictures/backgroundImage.jpg");
    background-size: cover;
  }
  
  .background {
-   background-image: url("backgroundImage.jpg");
+   background-image: url("../profilePictures/backgroundImage.jpg");
    color: rgba(241, 239, 239, 0.94);
    background-size: cover; }
 
