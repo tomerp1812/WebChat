@@ -8,30 +8,42 @@ An ongoing task of creating WhatsApp Web application using a combination of seve
   - [Registration Screen](#registration-screen)
   - [Chat Screen](#chat-screen)
 - [Technologies Used](#technologies-used)
+- [Notes](#notes)
 - [Installation and Execution](#installation-and-execution)
 - [Authors](#authors)
 
 ## Description
-This is a simple project that includes three screens: a registration screen, a login screen, and a chats screen. The goal is to create a basic user interface using HTML and CSS. Bootstrap 5 has been used for some of the UI elements to enhance the design.
+This is a chat application that allows users to register, login, and communicate with their contacts in real-time. The project includes a registration screen that validates all fields to ensure they are filled in correctly. The login screen checks that the user is registered and authenticated before granting access to the chat screen. The chat screen includes a list of contacts that can be added, searched, and selected for messaging. Messages are sent and received in real-time using React components and state management. The user interface is designed using HTML, CSS, and Bootstrap 5 to provide a modern and responsive design. While there is no server-side functionality yet, the project provides a solid foundation for building a complete chat application with a server backend.
 
 ## Screens
 The project includes the following screens:
 
 ### Login Screen
-The login screen is the main page of the web application. On this screen, the user is prompted to enter their username and password to log in. If the user does not have an account, there is a link to the registration screen. The design of the login screen is simple and clean, making it easy for users to quickly access the application.
+The login screen is the main page of the web application, accessible through the home route. On this screen, users can enter their login credentials and click the "Log in" button to access the chat screen. Users who do not yet have an account can click the "Sign up" button to navigate to the registration screen. The design of the login screen is simple and clean, making it easy for users to quickly access the application. The login form includes input fields for the username and password, with client-side validation to ensure that both fields are filled out before allowing the user to submit the form.
 
-<img width="389" alt="Login Screen" src="https://user-images.githubusercontent.com/110912180/234310587-a9f88b7c-def5-4385-9d92-4dd96b6ec207.png">
+<img width="389" alt="Login Screen" src="https://github.com/IditMedizada/WhatsApp-Web/assets/110912180/bbeef1dd-cd40-4b9a-a7e3-796cf5cf849c"> 
 
 
 ### Registration Screen
-The registration screen allows new users to sign up for the chat application. On this screen, users are asked to enter a username, password, display name, and picture. Additionally, there is a password verification field to ensure that the user enters the correct password. The design of the registration screen is similar to the login screen in terms of visibility.
+The registration screen allows new users to sign up for the chat application. On this screen, users are asked to enter a username, password, display name, and picture. Each field has specific requirements, which are displayed in red under the field when the user clicks on it. Additionally, there is a password verification field to ensure that the user enters the correct password. If the user attempts to register with incomplete or invalid information, an error message is displayed in red at the bottom of the screen indicating the reason they cannot register. The design of the registration screen is similar to the login screen in terms of visibility.
 
-<img width="389" alt="Registration Screen" src="https://user-images.githubusercontent.com/110912180/234310880-69f1bb69-2701-43dd-814f-0e87cae66053.png">
+<img width="389" alt="Registration Screen" src="https://github.com/IditMedizada/WhatsApp-Web/assets/110912180/066a12c7-e18b-4d83-b2e9-8c6669a1c4fe">
+
 
 ### Chat Screen
-The chat screen is divided into two parts. In the first part, a list of chats is displayed for each user the current user is talking with. The information displayed for each chat includes a photo of the user, their nickname, the last message sent, and the date/time it arrived. In the second part of the screen, the correspondence (that is, the messages) with the same recipient will be displayed. The design of the chat screen is intuitive, making it easy for users to navigate and interact with the application. Additionally The chat screen includes a popup window to add a new recipient to the list of chats. When the user clicks on the "Add" button, a popup window appears, asking for the recipient's username. 
+The chat screen consists of two main sections. The first section displays a list of contacts with whom the current user is chatting. Each contact is represented by a photo, nickname, and the last message sent with the date and time it arrived. The list of contacts is interactive, and users can switch conversations by clicking on a specific contact. The design of the contact list is user-friendly and visually appealing, with a different color displayed when hovering or pressing on a contact.
 
-<img width="389" alt="chat Screen" src="https://user-images.githubusercontent.com/110912180/234311527-10f66c8b-801e-4c41-b39a-ad1665ea5b88.png">
+The second section of the chat screen displays the conversation with the selected contact. Users can send messages, and the messages will be displayed with a different design to differentiate between the sent and received messages. The chat screen includes a search bar to find existing contacts quickly, and a button to add a new contact to the list. When the user clicks on the "Add contact" button, a popup window appears, asking for the recipient's username.
+
+Finally, the chat screen includes a logout button that allows the user to go back to the login screen. The chat screen is designed to be intuitive and easy to use, providing a seamless chatting experience for users.
+
+<img width="389" alt="chat Screen" src="https://github.com/IditMedizada/WhatsApp-Web/assets/110912180/46afba4a-ec48-485e-bba0-08b3fa8d877a">
+
+## Notes
+
+* Note that due to the lack of a server, all chats will be deleted whenever the user logs out.
+* Upon logging in, a user will be greeted with a welcoming header "Welcome to teamChat!" displayed on the right side of the message area.
+* Messages with more than 20 characters will be truncated on the left panel, with the first 20 characters shown followed by an ellipsis (...) to indicate that there is more to the message.
 
 ## Technologies Used
 The project uses the following technologies:
@@ -39,6 +51,8 @@ The project uses the following technologies:
 * HTML
 * CSS
 * Bootstrap 5
+* JavaScript
+* Jquery
 * React
 
 ## installation-and-execution
