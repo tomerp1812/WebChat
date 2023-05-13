@@ -44,6 +44,7 @@ Finally, the chat screen includes a logout button that allows the user to go bac
 * Note that due to the lack of a server, all chats will be deleted whenever the user logs out.
 * Upon logging in, a user will be greeted with a welcoming header "Welcome to teamChat!" displayed on the right side of the message area.
 * Messages with more than 20 characters will be truncated on the left panel, with the first 20 characters shown followed by an ellipsis (...) to indicate that there is more to the message.
+* The pictures for the new contacts is beeing selected randomally from a pool of 5 pictures.
 
 ## Technologies Used
 The project uses the following technologies:
