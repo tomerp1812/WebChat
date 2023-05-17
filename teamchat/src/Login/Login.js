@@ -30,6 +30,7 @@ function Login({ list, setUser }) {
   // if the user enter correct username and password- move to chat screen
   // else print Username or Password incorrect message
   const handleClick = (event) => {
+    event.preventDefault();
     let found = false;
     // check if the list is not empty
     if (list && list.length > 0) {
