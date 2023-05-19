@@ -22,7 +22,7 @@ body {
   height: 80vh;
   min-height: 300px;
   max-height: 520px;
-  background: #E6EAEA;
+  background-image: url("profilePictures/chatScreenBackground.jpg");
 }
 
 
@@ -44,15 +44,18 @@ body {
   overflow: hidden;
   position: relative;
 }
-.addNewContact{
-  color:black;
+
+.addNewContact {
+  color: black;
 }
+
 @media screen and (max-width: 735px) {
   #frame #sidepanel {
     /* width: 58px;
     min-width: 58px; */
   }
 }
+
 /* logout button */
 .button {
   right: 0;
@@ -60,9 +63,11 @@ body {
   position: absolute;
 
 }
-.font_small{
-  font-size:xx-small;
+
+.font_small {
+  font-size: xx-small;
 }
+
 #frame #sidepanel #profile {
   width: 80%;
   margin: 10px auto;
@@ -104,19 +109,32 @@ body {
 }
 
 #frame #sidepanel #profile .wrap img {
-  width: 50px;
+  /* width: 50px;
+  border-radius: 50%; */
   border-radius: 50%;
+  width: 50px;
+  /* Adjust the width and height according to your needs */
+  height: 50px;
+  object-fit: cover;
+  /* Change the color as desired */
+
+  
   padding: 3px;
   border: 2px solid #5b5dee;
-  height: auto;
   float: left;
 
 }
 
 @media screen and (max-width: 735px) {
   #frame #sidepanel #profile .wrap img {
-    width: 40px;
+    /* width: 40px; */
     margin-left: 4px;
+
+    border-radius: 50%;
+    width: 30px; /* Adjust the width and height according to your needs */
+    height: 30px;
+    object-fit: cover;
+    border: 3px solid #000; /* Change the color as desired */
   }
 }
 
@@ -161,10 +179,12 @@ body {
   background: rgba(17, 19, 131, 0.53);
   color: #f5f5f5;
 }
-.boldFont{
+
+.boldFont {
   font-weight: bold;
 }
-.font_medium{
+
+.font_medium {
   font-size: small;
 }
 
@@ -193,17 +213,21 @@ body {
   padding: 10px 0 15px 0;
   font-size: 0.9em;
   cursor: pointer;
-  border-bottom: 1px solid #ccc; /* add a border to separate contacts */
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; /* add a box-shadow to give the contact depth */
+  border-bottom: 1px solid #ccc;
+  /* add a border to separate contacts */
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  /* add a box-shadow to give the contact depth */
 }
 
 
 .selected {
-  background-color: #010617;
+  background: rgba(17, 19, 131, 0.53);
+
 }
 
 #frame #sidepanel #contacts ul li.contact:hover:not(.selected) {
-  background-color: #080638; /* lighter shade of the original background color */
+  background-color: #080638;
+  /* lighter shade of the original background color */
 }
 
 #frame #sidepanel #contacts ul li.contact .wrap {
@@ -217,10 +241,18 @@ body {
 
 
 #frame #sidepanel #contacts ul li.contact .wrap img {
-  width: 40px;
-  border-radius: 50%;
+  /* width: 40px;
+  border-radius: 50%; */
   /* float: left; */
   margin-right: 10px;
+
+  border-radius: 50%;
+  width: 40px;
+  /* Adjust the width and height according to your needs */
+  height: 40px;
+  object-fit: cover;
+  border: 3px solid #2c0dde;
+  /* Change the color as desired */
 }
 
 /* costumize scroll bar for contacts */
@@ -258,6 +290,7 @@ body {
   width: 100%;
   bottom: 0;
 }
+
 /*Add contents button*/
 #frame #sidepanel #bottom-bar button {
   float: left;
@@ -299,17 +332,27 @@ body {
   height: 60px;
   line-height: 60px;
   background: #f5f5f5;
+
 }
 
 /*profile image position*/
 #frame .content .contact-profile img {
-  width: 40px;
+  /* width: 40px;
   border-radius: 50%;
+   */
+  border-radius: 50%;
+  width: 40px;
+  /* Adjust the width and height according to your needs */
+  height: 40px;
+  object-fit: cover;
+  border: 3px solid #000;
+  /* Change the color as desired */
+
   float: left;
   margin: 9px 12px 0 9px;
 }
 
-.contactBackgroundColor{
+.contactBackgroundColor {
   color: #000000;
 }
 
@@ -333,13 +376,12 @@ body {
 /*massages background*/
 #frame .content .messages ul li.sent p {
   background: rgb(3, 4, 66);
-  color: #f5f5f5;
 }
 
 /*design of send massage*/
 #frame .content .messages ul li.replies img {
   float: right;
-  margin: 6px 0 0 8px;
+  margin: 6px 0 2 8px;
 }
 
 #frame .content .messages ul li.replies p {
@@ -359,11 +401,32 @@ body {
   overflow-wrap: break-word;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+  
 }
 
 #frame .content .messages ul li img {
-  width: 22px;
+  /* width: 22px;
+  border-radius: 50%; */
+  /* float: left;
+
   border-radius: 50%;
+  width: 40; /* Adjust the width and height according to your needs */
+  /* height: 40px;
+  object-fit: cover;
+  border: 3px solid #000; Change the color as desired */ 
+    /* width: 50px;
+  border-radius: 50%; */
+  border-radius: 50%;
+  width: 30px;
+  /* Adjust the width and height according to your needs */
+  height: 30px;
+  object-fit: cover;
+  /* Change the color as desired */
+
+  
+  padding: 3px;
+  border: 2px solid #5b5dee;
   float: left;
 }
 
@@ -420,13 +483,13 @@ body {
 }
 
 
-.listClass{
+.listClass {
   padding-left: 2%;
   padding-top: 2%;
   padding-bottom: 1%;
 }
 
-.messageMargin{
+.messageMargin {
   margin-bottom: 5px;
 }
 
@@ -442,6 +505,7 @@ body {
   text-align: center;
   font-size: 18px;
   color: #666;
+  background-image: url("profilePictures/chatScreenBackground.jpg");
 }
 
 .welcome-message h2 {
@@ -450,6 +514,6 @@ body {
   color: #333;
 }
 
-.preview{
+.preview {
   font-size: 0.6em;
 }
