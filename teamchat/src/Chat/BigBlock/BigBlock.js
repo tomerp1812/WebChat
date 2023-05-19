@@ -14,11 +14,15 @@ function BigBlock({ me }) {
       sentTo: selectedContact.id,
       sent: message,
       time: new Date().toLocaleString('en-GB', {
-        hour: 'numeric', minute: 'numeric',
+        hour: 'numeric', minute: 'numeric', second: 'numeric',
         day: 'numeric', month: 'numeric', year: 'numeric'
       })
     };
     setSentList([...sentList, newMassage]);
+    //updating the selected contact with the last message
+    selectedContact.massage = newMassage.sent;
+    selectedContact.time = newMassage.time;
+    setSelectedContact(selectedContact);
   }
 
   //setter for the selected contact
