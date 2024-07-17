@@ -65,7 +65,7 @@ From your command line:
   
 ```bash
 # Clone this repository.
-$  git clone -b master1b https://github.com/IditMedizada/WhatsApp-Web.git
+$  git clone https://github.com/tomerp1812/WebChat.git
 
 # Go into the repository.
 $ cd WhatsApp-Web
