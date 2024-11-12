@@ -13,7 +13,7 @@ An ongoing task of creating WhatsApp Web application using a combination of seve
 - [Authors](#authors)
 
 ## Description
-This is a chat application that allows users to register, login, and communicate with their contacts in real-time. The project includes a registration screen that validates all fields to ensure they are filled in correctly. The login screen checks that the user is registered and authenticated before granting access to the chat screen. The chat screen includes a list of contacts that can be added, searched, and selected for messaging. Messages are sent and received in real-time using React components and state management. The user interface is designed using HTML, CSS, and Bootstrap 5 to provide a modern and responsive design. While there is no server-side functionality yet, the project provides a solid foundation for building a complete chat application with a server backend.
+This is a chat application that allows users to register, login, and communicate with their contacts in real-time. The project includes a registration screen that validates all fields to ensure they are filled in correctly. The login screen checks that the user is registered and authenticated before granting access to the chat screen. The chat screen includes a list of contacts that can be added, searched, and selected for messaging. Messages are sent and received in real-time using React components and state management. The user interface is designed using HTML, CSS, and Bootstrap 5 to provide a modern and responsive design. While there is no server-side functionality yet, the project provides a solid foundation for building a complete chat application with a server backend. 
 
 ## Screens
 The project includes the following screens:
